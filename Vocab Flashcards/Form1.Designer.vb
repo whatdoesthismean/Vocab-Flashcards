@@ -36,6 +36,7 @@ Partial Class Form1
         Me.rdoNihongo = New System.Windows.Forms.RadioButton()
         Me.rdoEnglish = New System.Windows.Forms.RadioButton()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.btnStart = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -63,6 +64,7 @@ Partial Class Form1
         Me.lblKana.TabIndex = 0
         Me.lblKana.Text = "かわいい"
         Me.lblKana.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.lblKana.Visible = False
         '
         'GroupBox2
         '
@@ -86,6 +88,7 @@ Partial Class Form1
         Me.lblEng.TabIndex = 1
         Me.lblEng.Text = "cute"
         Me.lblEng.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.lblEng.Visible = False
         '
         'btnFlip
         '
@@ -99,6 +102,7 @@ Partial Class Form1
         Me.btnFlip.Text = "フリップ"
         Me.ToolTip1.SetToolTip(Me.btnFlip, "Flip the Card")
         Me.btnFlip.UseVisualStyleBackColor = False
+        Me.btnFlip.Visible = False
         '
         'btnNext
         '
@@ -111,6 +115,7 @@ Partial Class Form1
         Me.btnNext.Text = "次のカード"
         Me.ToolTip1.SetToolTip(Me.btnNext, "Next Card")
         Me.btnNext.UseVisualStyleBackColor = False
+        Me.btnNext.Visible = False
         '
         'Button2
         '
@@ -123,6 +128,7 @@ Partial Class Form1
         Me.Button2.Text = "前のカード"
         Me.ToolTip1.SetToolTip(Me.Button2, "Previous Card")
         Me.Button2.UseVisualStyleBackColor = False
+        Me.Button2.Visible = False
         '
         'btnAdd
         '
@@ -154,7 +160,7 @@ Partial Class Form1
         '
         Me.rdoNihongo.AutoSize = True
         Me.rdoNihongo.Checked = True
-        Me.rdoNihongo.Location = New System.Drawing.Point(39, 22)
+        Me.rdoNihongo.Location = New System.Drawing.Point(6, 24)
         Me.rdoNihongo.Name = "rdoNihongo"
         Me.rdoNihongo.Size = New System.Drawing.Size(76, 26)
         Me.rdoNihongo.TabIndex = 8
@@ -166,7 +172,7 @@ Partial Class Form1
         'rdoEnglish
         '
         Me.rdoEnglish.AutoSize = True
-        Me.rdoEnglish.Location = New System.Drawing.Point(39, 47)
+        Me.rdoEnglish.Location = New System.Drawing.Point(6, 48)
         Me.rdoEnglish.Name = "rdoEnglish"
         Me.rdoEnglish.Size = New System.Drawing.Size(60, 26)
         Me.rdoEnglish.TabIndex = 9
@@ -176,6 +182,7 @@ Partial Class Form1
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.btnStart)
         Me.GroupBox3.Controls.Add(Me.rdoNihongo)
         Me.GroupBox3.Controls.Add(Me.rdoEnglish)
         Me.GroupBox3.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
@@ -186,6 +193,18 @@ Partial Class Form1
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "テスト"
         Me.ToolTip1.SetToolTip(Me.GroupBox3, "Choose Test Type")
+        '
+        'btnStart
+        '
+        Me.btnStart.BackColor = System.Drawing.Color.MistyRose
+        Me.btnStart.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnStart.Location = New System.Drawing.Point(88, 42)
+        Me.btnStart.Name = "btnStart"
+        Me.btnStart.Size = New System.Drawing.Size(63, 32)
+        Me.btnStart.TabIndex = 0
+        Me.btnStart.Text = "スタート"
+        Me.ToolTip1.SetToolTip(Me.btnStart, "Start / Restart Test")
+        Me.btnStart.UseVisualStyleBackColor = False
         '
         'Form1
         '
@@ -227,4 +246,5 @@ Partial Class Form1
     Friend WithEvents rdoNihongo As RadioButton
     Friend WithEvents rdoEnglish As RadioButton
     Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents btnStart As Button
 End Class
