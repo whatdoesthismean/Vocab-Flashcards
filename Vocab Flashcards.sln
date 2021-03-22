@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Vocab Flashcards", "Vocab Flashcards\Vocab Flashcards.vbproj", "{F1B97623-E71F-4196-B0B5-E8E648D2B168}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1B97623-E71F-4196-B0B5-E8E648D2B168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1B97623-E71F-4196-B0B5-E8E648D2B168}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1B97623-E71F-4196-B0B5-E8E648D2B168}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1B97623-E71F-4196-B0B5-E8E648D2B168}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {13B30917-E0C0-4639-A104-1F83BA28DF80}
+	EndGlobalSection
+EndGlobal
