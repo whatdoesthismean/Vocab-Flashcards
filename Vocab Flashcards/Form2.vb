@@ -59,7 +59,7 @@
 
     End Sub
 
-    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+    Private Sub btnReturn_Click(sender As Object, e As EventArgs) Handles btnReturn.Click
 
         R = New IO.StreamReader("nihongo.txt")
         While (R.Peek() > -1)

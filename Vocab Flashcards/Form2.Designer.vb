@@ -29,7 +29,7 @@ Partial Class Form2
         Me.txtEngNew = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnAddNew = New System.Windows.Forms.Button()
-        Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.btnReturn = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.lblEngPlease = New System.Windows.Forms.Label()
         Me.lblNihongoPlease = New System.Windows.Forms.Label()
@@ -105,18 +105,18 @@ Partial Class Form2
         Me.ToolTip1.SetToolTip(Me.btnAddNew, "あたらしいカードをついか - Add New Card")
         Me.btnAddNew.UseVisualStyleBackColor = False
         '
-        'btnUpdate
+        'btnReturn
         '
-        Me.btnUpdate.AutoSize = True
-        Me.btnUpdate.BackColor = System.Drawing.Color.LightCoral
-        Me.btnUpdate.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnUpdate.Location = New System.Drawing.Point(97, 625)
-        Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(98, 48)
-        Me.btnUpdate.TabIndex = 8
-        Me.btnUpdate.Text = "戻る"
-        Me.ToolTip1.SetToolTip(Me.btnUpdate, "もどる - Return to Test")
-        Me.btnUpdate.UseVisualStyleBackColor = False
+        Me.btnReturn.AutoSize = True
+        Me.btnReturn.BackColor = System.Drawing.Color.LightCoral
+        Me.btnReturn.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnReturn.Location = New System.Drawing.Point(97, 625)
+        Me.btnReturn.Name = "btnReturn"
+        Me.btnReturn.Size = New System.Drawing.Size(98, 48)
+        Me.btnReturn.TabIndex = 8
+        Me.btnReturn.Text = "戻る"
+        Me.ToolTip1.SetToolTip(Me.btnReturn, "もどる - Return to Test")
+        Me.btnReturn.UseVisualStyleBackColor = False
         '
         'lblEngPlease
         '
@@ -164,7 +164,7 @@ Partial Class Form2
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.lblNihongoPlease)
         Me.Controls.Add(Me.lblEngPlease)
-        Me.Controls.Add(Me.btnUpdate)
+        Me.Controls.Add(Me.btnReturn)
         Me.Controls.Add(Me.btnAddNew)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GroupBox1)
@@ -187,7 +187,7 @@ Partial Class Form2
     Friend WithEvents Label1 As Label
     Friend WithEvents btnAddNew As Button
     Friend WithEvents ToolTip1 As ToolTip
-    Friend WithEvents btnUpdate As Button
+    Friend WithEvents btnReturn As Button
     Friend WithEvents lblEngPlease As Label
     Friend WithEvents lblNihongoPlease As Label
     Friend WithEvents lblSaved As Label
