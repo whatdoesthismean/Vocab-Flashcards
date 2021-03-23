@@ -249,7 +249,8 @@ Partial Class Form1
         Me.Controls.Add(Me.grpEng)
         Me.Controls.Add(Me.grpNihongo)
         Me.Name = "Form1"
-        Me.Text = "単語帳 ・ ボキャブラリー ・ フラッシュカード"
+        Me.Text = "単語帳 - たんごちょう"
+        Me.ToolTip1.SetToolTip(Me, "Flashcard Set")
         Me.grpNihongo.ResumeLayout(False)
         Me.grpEng.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)

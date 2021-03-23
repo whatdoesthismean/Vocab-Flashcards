@@ -169,8 +169,8 @@ Partial Class Form2
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Form2"
-        Me.Text = "Form2"
-        Me.ToolTip1.SetToolTip(Me, "もどる - Return To Test")
+        Me.Text = "単語帳 - たんごちょう"
+        Me.ToolTip1.SetToolTip(Me, "Add Flashcard(s)")
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
