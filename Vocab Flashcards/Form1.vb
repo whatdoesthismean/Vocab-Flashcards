@@ -1,10 +1,12 @@
 ﻿Public Class Form1
 
     Dim R As IO.StreamReader
-    Dim intSub As Integer
+    Dim intSub As Integer 'works with list item count to select cards in order
 
     Private Sub btnStart_Click(sender As Object, e As EventArgs) Handles btnStart.Click
 
+        lstNihongo.Items.Clear() 'clear the list boxes so old list items aren't duplicated
+        lstEng.Items.Clear()
 
         R = New IO.StreamReader("nihongo.txt") 'read japanese vocabulary list from text file
         While (R.Peek() > -1)
@@ -20,10 +22,10 @@
         R.Close()
 
 
-        lblKana.Text = lstNihongo.Items(intSub).ToString 'put first vocabulary words into form labels
+        lblKana.Text = lstNihongo.Items(intSub).ToString 'load first flashcard into form labels
         lblEng.Text = lstEng.Items(intSub).ToString
 
-        If rdoNihongo.Checked Then
+        If rdoNihongo.Checked Then 'select which side of flashcard shows first based on radio button selection
             lblKana.Visible = True
             lblEng.Visible = False
         Else
@@ -31,25 +33,27 @@
             lblEng.Visible = True
         End If
 
-        btnFlip.Visible = True
+        btnFlip.Visible = True 'make user controls appear
         btnNext.Visible = True
         btnPrev.Visible = True
+        grpNihongo.Visible = True
+        grpEng.Visible = True
 
     End Sub
 
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
 
-        If intSub < lstNihongo.Items.Count - 1 Then
+        If intSub < lstNihongo.Items.Count - 1 Then  'cycle through cards, after last card on list, return to first card
             intSub += 1
         Else
             intSub = 0
         End If
 
 
-        lblKana.Text = lstNihongo.Items(intSub).ToString
+        lblKana.Text = lstNihongo.Items(intSub).ToString   'load next flashcard into form labels
         lblEng.Text = lstEng.Items(intSub).ToString
 
-        If rdoNihongo.Checked Then
+        If rdoNihongo.Checked Then  'select which side of flashcard shows first
             lblKana.Visible = True
             lblEng.Visible = False
         Else
@@ -57,7 +61,7 @@
             lblEng.Visible = True
         End If
 
-        btnFlip.Focus()
+        btnFlip.Focus()      'return focus to flip button
 
     End Sub
 
@@ -65,7 +69,7 @@
 
 
 
-        If rdoNihongo.Checked Then
+        If rdoNihongo.Checked Then          'flip the flashcard
             If lblEng.Visible = False Then
                 lblEng.Visible = True
             Else
@@ -79,7 +83,7 @@
             End If
         End If
 
-        btnFlip.Focus()
+        btnFlip.Focus()     'return focus to flip button
 
     End Sub
 
@@ -89,7 +93,7 @@
 
 
 
-        If intSub > 0 Then
+        If intSub > 0 Then      'cycle through flashcards in reverse order
             intSub -= 1
             lblKana.Text = lstNihongo.Items(intSub).ToString
             lblEng.Text = lstEng.Items(intSub).ToString
@@ -99,7 +103,7 @@
             lblEng.Text = lstEng.Items(intSub).ToString
         End If
 
-        If rdoNihongo.Checked Then
+        If rdoNihongo.Checked Then  'determine which side of flashcard to show first
             lblKana.Visible = True
             lblEng.Visible = False
         Else
@@ -107,20 +111,22 @@
             lblEng.Visible = True
         End If
 
-        btnFlip.Focus()
+        btnFlip.Focus()     'return focus to flip button
 
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
-        Me.Close()
+
+        Me.Close()  'close the program
+
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
 
-        lstNihongo.Items.Clear()
+        lstNihongo.Items.Clear()    'clear list items so old items aren't duplicated
         lstEng.Items.Clear()
 
-        R = New IO.StreamReader("nihongo.txt")
+        R = New IO.StreamReader("nihongo.txt")  'read flashcards from text files into listboxes
         While (R.Peek() > -1)
             lstNihongo.Items.Add(R.ReadLine)
         End While
@@ -132,7 +138,13 @@
         End While
         R.Close()
 
-        Form2.Show()
+        btnFlip.Visible = False 'make user controls disappear
+        btnNext.Visible = False
+        btnPrev.Visible = False
+        grpNihongo.Visible = False
+        grpEng.Visible = False
+
+        Form2.Show()        'show [add new card] form
 
     End Sub
 End Class

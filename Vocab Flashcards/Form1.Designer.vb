@@ -23,9 +23,9 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.grpNihongo = New System.Windows.Forms.GroupBox()
         Me.lblKana = New System.Windows.Forms.Label()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.grpEng = New System.Windows.Forms.GroupBox()
         Me.lblEng = New System.Windows.Forms.Label()
         Me.btnFlip = New System.Windows.Forms.Button()
         Me.btnNext = New System.Windows.Forms.Button()
@@ -39,23 +39,24 @@ Partial Class Form1
         Me.btnStart = New System.Windows.Forms.Button()
         Me.lstNihongo = New System.Windows.Forms.ListBox()
         Me.lstEng = New System.Windows.Forms.ListBox()
-        Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
+        Me.grpNihongo.SuspendLayout()
+        Me.grpEng.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
-        'GroupBox1
+        'grpNihongo
         '
-        Me.GroupBox1.BackColor = System.Drawing.Color.White
-        Me.GroupBox1.Controls.Add(Me.lblKana)
-        Me.GroupBox1.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.GroupBox1.Location = New System.Drawing.Point(24, 36)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(274, 154)
-        Me.GroupBox1.TabIndex = 2
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "日本語"
-        Me.ToolTip1.SetToolTip(Me.GroupBox1, "Japanese Translation")
+        Me.grpNihongo.BackColor = System.Drawing.Color.White
+        Me.grpNihongo.Controls.Add(Me.lblKana)
+        Me.grpNihongo.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.grpNihongo.Location = New System.Drawing.Point(24, 36)
+        Me.grpNihongo.Name = "grpNihongo"
+        Me.grpNihongo.Size = New System.Drawing.Size(274, 154)
+        Me.grpNihongo.TabIndex = 2
+        Me.grpNihongo.TabStop = False
+        Me.grpNihongo.Text = "日本語"
+        Me.ToolTip1.SetToolTip(Me.grpNihongo, "にほんご - Japanese Translation")
+        Me.grpNihongo.Visible = False
         '
         'lblKana
         '
@@ -68,18 +69,19 @@ Partial Class Form1
         Me.lblKana.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.lblKana.Visible = False
         '
-        'GroupBox2
+        'grpEng
         '
-        Me.GroupBox2.BackColor = System.Drawing.Color.White
-        Me.GroupBox2.Controls.Add(Me.lblEng)
-        Me.GroupBox2.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.GroupBox2.Location = New System.Drawing.Point(467, 36)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(274, 154)
-        Me.GroupBox2.TabIndex = 3
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "英語"
-        Me.ToolTip1.SetToolTip(Me.GroupBox2, "English Translation")
+        Me.grpEng.BackColor = System.Drawing.Color.White
+        Me.grpEng.Controls.Add(Me.lblEng)
+        Me.grpEng.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.grpEng.Location = New System.Drawing.Point(467, 36)
+        Me.grpEng.Name = "grpEng"
+        Me.grpEng.Size = New System.Drawing.Size(274, 154)
+        Me.grpEng.TabIndex = 3
+        Me.grpEng.TabStop = False
+        Me.grpEng.Text = "英語"
+        Me.ToolTip1.SetToolTip(Me.grpEng, "えいご - English Translation")
+        Me.grpEng.Visible = False
         '
         'lblEng
         '
@@ -108,41 +110,41 @@ Partial Class Form1
         '
         'btnNext
         '
-        Me.btnNext.BackColor = System.Drawing.Color.LightBlue
+        Me.btnNext.BackColor = System.Drawing.Color.AliceBlue
         Me.btnNext.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnNext.Location = New System.Drawing.Point(211, 205)
         Me.btnNext.Name = "btnNext"
         Me.btnNext.Size = New System.Drawing.Size(87, 38)
         Me.btnNext.TabIndex = 4
         Me.btnNext.Text = "次のカード"
-        Me.ToolTip1.SetToolTip(Me.btnNext, "Next Card")
+        Me.ToolTip1.SetToolTip(Me.btnNext, "つぎにカード - Next Card")
         Me.btnNext.UseVisualStyleBackColor = False
         Me.btnNext.Visible = False
         '
         'btnPrev
         '
-        Me.btnPrev.BackColor = System.Drawing.Color.LightBlue
+        Me.btnPrev.BackColor = System.Drawing.Color.AliceBlue
         Me.btnPrev.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnPrev.Location = New System.Drawing.Point(467, 205)
         Me.btnPrev.Name = "btnPrev"
         Me.btnPrev.Size = New System.Drawing.Size(87, 38)
         Me.btnPrev.TabIndex = 5
         Me.btnPrev.Text = "前のカード"
-        Me.ToolTip1.SetToolTip(Me.btnPrev, "Previous Card")
+        Me.ToolTip1.SetToolTip(Me.btnPrev, "まえのカード - Previous Card")
         Me.btnPrev.UseVisualStyleBackColor = False
         Me.btnPrev.Visible = False
         '
         'btnAdd
         '
         Me.btnAdd.AutoSize = True
-        Me.btnAdd.BackColor = System.Drawing.Color.PaleGreen
+        Me.btnAdd.BackColor = System.Drawing.Color.SkyBlue
         Me.btnAdd.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnAdd.Location = New System.Drawing.Point(336, 179)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(94, 32)
         Me.btnAdd.TabIndex = 6
         Me.btnAdd.Text = "新しいカード"
-        Me.ToolTip1.SetToolTip(Me.btnAdd, "Add New Cards")
+        Me.ToolTip1.SetToolTip(Me.btnAdd, "あたらしいカード - Add New Cards")
         Me.btnAdd.UseVisualStyleBackColor = False
         '
         'btnExit
@@ -154,8 +156,8 @@ Partial Class Form1
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(94, 32)
         Me.btnExit.TabIndex = 7
-        Me.btnExit.Text = "終了"
-        Me.ToolTip1.SetToolTip(Me.btnExit, "Close Program")
+        Me.btnExit.Text = "閉じる"
+        Me.ToolTip1.SetToolTip(Me.btnExit, "とじる - Close Program")
         Me.btnExit.UseVisualStyleBackColor = False
         '
         'rdoNihongo
@@ -198,7 +200,7 @@ Partial Class Form1
         '
         'btnStart
         '
-        Me.btnStart.BackColor = System.Drawing.Color.MistyRose
+        Me.btnStart.BackColor = System.Drawing.Color.PaleGreen
         Me.btnStart.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btnStart.Location = New System.Drawing.Point(88, 42)
         Me.btnStart.Name = "btnStart"
@@ -216,6 +218,7 @@ Partial Class Form1
         Me.lstNihongo.Name = "lstNihongo"
         Me.lstNihongo.Size = New System.Drawing.Size(120, 64)
         Me.lstNihongo.TabIndex = 11
+        Me.lstNihongo.Visible = False
         '
         'lstEng
         '
@@ -225,6 +228,7 @@ Partial Class Form1
         Me.lstEng.Name = "lstEng"
         Me.lstEng.Size = New System.Drawing.Size(120, 64)
         Me.lstEng.TabIndex = 12
+        Me.lstEng.Visible = False
         '
         'Form1
         '
@@ -242,12 +246,12 @@ Partial Class Form1
         Me.Controls.Add(Me.btnPrev)
         Me.Controls.Add(Me.btnNext)
         Me.Controls.Add(Me.btnFlip)
-        Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.grpEng)
+        Me.Controls.Add(Me.grpNihongo)
         Me.Name = "Form1"
         Me.Text = "単語帳 ・ ボキャブラリー ・ フラッシュカード"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox2.ResumeLayout(False)
+        Me.grpNihongo.ResumeLayout(False)
+        Me.grpEng.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.ResumeLayout(False)
@@ -255,9 +259,9 @@ Partial Class Form1
 
     End Sub
 
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents grpNihongo As GroupBox
     Friend WithEvents lblKana As Label
-    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents grpEng As GroupBox
     Friend WithEvents btnFlip As Button
     Friend WithEvents lblEng As Label
     Friend WithEvents ToolTip1 As ToolTip
