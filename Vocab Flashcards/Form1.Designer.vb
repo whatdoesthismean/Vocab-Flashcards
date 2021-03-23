@@ -60,7 +60,7 @@ Partial Class Form1
         '
         'lblKana
         '
-        Me.lblKana.Font = New System.Drawing.Font("XANO-mincho-U32", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblKana.Font = New System.Drawing.Font("MS Mincho", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.lblKana.Location = New System.Drawing.Point(6, 71)
         Me.lblKana.Name = "lblKana"
         Me.lblKana.Size = New System.Drawing.Size(262, 42)
@@ -85,7 +85,7 @@ Partial Class Form1
         '
         'lblEng
         '
-        Me.lblEng.Font = New System.Drawing.Font("XANO-mincho-U32", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblEng.Font = New System.Drawing.Font("MS Mincho", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.lblEng.Location = New System.Drawing.Point(6, 71)
         Me.lblEng.Name = "lblEng"
         Me.lblEng.Size = New System.Drawing.Size(262, 42)
