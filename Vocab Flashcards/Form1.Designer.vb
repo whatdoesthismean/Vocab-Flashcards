@@ -29,7 +29,7 @@ Partial Class Form1
         Me.lblEng = New System.Windows.Forms.Label()
         Me.btnFlip = New System.Windows.Forms.Button()
         Me.btnNext = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnPrev = New System.Windows.Forms.Button()
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
@@ -37,6 +37,8 @@ Partial Class Form1
         Me.rdoEnglish = New System.Windows.Forms.RadioButton()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.btnStart = New System.Windows.Forms.Button()
+        Me.lstNihongo = New System.Windows.Forms.ListBox()
+        Me.lstEng = New System.Windows.Forms.ListBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -117,18 +119,18 @@ Partial Class Form1
         Me.btnNext.UseVisualStyleBackColor = False
         Me.btnNext.Visible = False
         '
-        'Button2
+        'btnPrev
         '
-        Me.Button2.BackColor = System.Drawing.Color.LightBlue
-        Me.Button2.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button2.Location = New System.Drawing.Point(467, 205)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(87, 38)
-        Me.Button2.TabIndex = 5
-        Me.Button2.Text = "前のカード"
-        Me.ToolTip1.SetToolTip(Me.Button2, "Previous Card")
-        Me.Button2.UseVisualStyleBackColor = False
-        Me.Button2.Visible = False
+        Me.btnPrev.BackColor = System.Drawing.Color.LightBlue
+        Me.btnPrev.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnPrev.Location = New System.Drawing.Point(467, 205)
+        Me.btnPrev.Name = "btnPrev"
+        Me.btnPrev.Size = New System.Drawing.Size(87, 38)
+        Me.btnPrev.TabIndex = 5
+        Me.btnPrev.Text = "前のカード"
+        Me.ToolTip1.SetToolTip(Me.btnPrev, "Previous Card")
+        Me.btnPrev.UseVisualStyleBackColor = False
+        Me.btnPrev.Visible = False
         '
         'btnAdd
         '
@@ -206,6 +208,24 @@ Partial Class Form1
         Me.ToolTip1.SetToolTip(Me.btnStart, "Start / Restart Test")
         Me.btnStart.UseVisualStyleBackColor = False
         '
+        'lstNihongo
+        '
+        Me.lstNihongo.FormattingEnabled = True
+        Me.lstNihongo.ItemHeight = 15
+        Me.lstNihongo.Location = New System.Drawing.Point(24, 196)
+        Me.lstNihongo.Name = "lstNihongo"
+        Me.lstNihongo.Size = New System.Drawing.Size(120, 64)
+        Me.lstNihongo.TabIndex = 11
+        '
+        'lstEng
+        '
+        Me.lstEng.FormattingEnabled = True
+        Me.lstEng.ItemHeight = 15
+        Me.lstEng.Location = New System.Drawing.Point(621, 196)
+        Me.lstEng.Name = "lstEng"
+        Me.lstEng.Size = New System.Drawing.Size(120, 64)
+        Me.lstEng.TabIndex = 12
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -214,10 +234,12 @@ Partial Class Form1
         Me.BackgroundImage = Global.Vocab_Flashcards.My.Resources.Resources.japanesepattern02
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(764, 270)
+        Me.Controls.Add(Me.lstEng)
+        Me.Controls.Add(Me.lstNihongo)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnAdd)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnPrev)
         Me.Controls.Add(Me.btnNext)
         Me.Controls.Add(Me.btnFlip)
         Me.Controls.Add(Me.GroupBox2)
@@ -240,11 +262,13 @@ Partial Class Form1
     Friend WithEvents lblEng As Label
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents btnNext As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnPrev As Button
     Friend WithEvents btnAdd As Button
     Friend WithEvents btnExit As Button
     Friend WithEvents rdoNihongo As RadioButton
     Friend WithEvents rdoEnglish As RadioButton
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents btnStart As Button
+    Friend WithEvents lstNihongo As ListBox
+    Friend WithEvents lstEng As ListBox
 End Class
