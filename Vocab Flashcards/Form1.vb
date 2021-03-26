@@ -83,7 +83,7 @@
             End If
         End If
 
-        btnFlip.Focus()     'return focus to flip button
+        btnNext.Focus()     'return focus to next button
 
     End Sub
 

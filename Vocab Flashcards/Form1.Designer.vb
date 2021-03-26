@@ -51,7 +51,7 @@ Partial Class Form1
         Me.grpNihongo.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.grpNihongo.Location = New System.Drawing.Point(24, 36)
         Me.grpNihongo.Name = "grpNihongo"
-        Me.grpNihongo.Size = New System.Drawing.Size(274, 154)
+        Me.grpNihongo.Size = New System.Drawing.Size(368, 154)
         Me.grpNihongo.TabIndex = 2
         Me.grpNihongo.TabStop = False
         Me.grpNihongo.Text = "日本語"
@@ -63,7 +63,7 @@ Partial Class Form1
         Me.lblKana.Font = New System.Drawing.Font("MS Mincho", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.lblKana.Location = New System.Drawing.Point(6, 71)
         Me.lblKana.Name = "lblKana"
-        Me.lblKana.Size = New System.Drawing.Size(262, 42)
+        Me.lblKana.Size = New System.Drawing.Size(356, 42)
         Me.lblKana.TabIndex = 0
         Me.lblKana.Text = "かわいい"
         Me.lblKana.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -74,9 +74,9 @@ Partial Class Form1
         Me.grpEng.BackColor = System.Drawing.Color.White
         Me.grpEng.Controls.Add(Me.lblEng)
         Me.grpEng.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.grpEng.Location = New System.Drawing.Point(467, 36)
+        Me.grpEng.Location = New System.Drawing.Point(587, 36)
         Me.grpEng.Name = "grpEng"
-        Me.grpEng.Size = New System.Drawing.Size(274, 154)
+        Me.grpEng.Size = New System.Drawing.Size(368, 154)
         Me.grpEng.TabIndex = 3
         Me.grpEng.TabStop = False
         Me.grpEng.Text = "英語"
@@ -88,7 +88,7 @@ Partial Class Form1
         Me.lblEng.Font = New System.Drawing.Font("MS Mincho", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.lblEng.Location = New System.Drawing.Point(6, 71)
         Me.lblEng.Name = "lblEng"
-        Me.lblEng.Size = New System.Drawing.Size(262, 42)
+        Me.lblEng.Size = New System.Drawing.Size(356, 42)
         Me.lblEng.TabIndex = 1
         Me.lblEng.Text = "cute"
         Me.lblEng.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -99,7 +99,7 @@ Partial Class Form1
         Me.btnFlip.AutoSize = True
         Me.btnFlip.BackColor = System.Drawing.Color.LightYellow
         Me.btnFlip.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnFlip.Location = New System.Drawing.Point(304, 103)
+        Me.btnFlip.Location = New System.Drawing.Point(410, 103)
         Me.btnFlip.Name = "btnFlip"
         Me.btnFlip.Size = New System.Drawing.Size(157, 55)
         Me.btnFlip.TabIndex = 2
@@ -125,7 +125,7 @@ Partial Class Form1
         '
         Me.btnPrev.BackColor = System.Drawing.Color.AliceBlue
         Me.btnPrev.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnPrev.Location = New System.Drawing.Point(467, 205)
+        Me.btnPrev.Location = New System.Drawing.Point(690, 205)
         Me.btnPrev.Name = "btnPrev"
         Me.btnPrev.Size = New System.Drawing.Size(87, 38)
         Me.btnPrev.TabIndex = 5
@@ -139,7 +139,7 @@ Partial Class Form1
         Me.btnAdd.AutoSize = True
         Me.btnAdd.BackColor = System.Drawing.Color.SkyBlue
         Me.btnAdd.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnAdd.Location = New System.Drawing.Point(336, 179)
+        Me.btnAdd.Location = New System.Drawing.Point(441, 179)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(94, 32)
         Me.btnAdd.TabIndex = 6
@@ -152,7 +152,7 @@ Partial Class Form1
         Me.btnExit.AutoSize = True
         Me.btnExit.BackColor = System.Drawing.Color.IndianRed
         Me.btnExit.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnExit.Location = New System.Drawing.Point(336, 222)
+        Me.btnExit.Location = New System.Drawing.Point(441, 222)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(94, 32)
         Me.btnExit.TabIndex = 7
@@ -190,7 +190,7 @@ Partial Class Form1
         Me.GroupBox3.Controls.Add(Me.rdoNihongo)
         Me.GroupBox3.Controls.Add(Me.rdoEnglish)
         Me.GroupBox3.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.GroupBox3.Location = New System.Drawing.Point(304, 12)
+        Me.GroupBox3.Location = New System.Drawing.Point(410, 12)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(157, 80)
         Me.GroupBox3.TabIndex = 10
@@ -224,7 +224,7 @@ Partial Class Form1
         '
         Me.lstEng.FormattingEnabled = True
         Me.lstEng.ItemHeight = 15
-        Me.lstEng.Location = New System.Drawing.Point(621, 196)
+        Me.lstEng.Location = New System.Drawing.Point(835, 196)
         Me.lstEng.Name = "lstEng"
         Me.lstEng.Size = New System.Drawing.Size(120, 64)
         Me.lstEng.TabIndex = 12
@@ -237,7 +237,7 @@ Partial Class Form1
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImage = Global.Vocab_Flashcards.My.Resources.Resources.japanesepattern02
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(764, 270)
+        Me.ClientSize = New System.Drawing.Size(976, 270)
         Me.Controls.Add(Me.lstEng)
         Me.Controls.Add(Me.lstNihongo)
         Me.Controls.Add(Me.GroupBox3)
