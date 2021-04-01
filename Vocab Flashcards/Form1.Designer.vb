@@ -37,11 +37,16 @@ Partial Class Form1
         Me.rdoEnglish = New System.Windows.Forms.RadioButton()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.btnStart = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.rdoVerbs = New System.Windows.Forms.RadioButton()
+        Me.rdoAdj = New System.Windows.Forms.RadioButton()
+        Me.rdoNouns = New System.Windows.Forms.RadioButton()
         Me.lstNihongo = New System.Windows.Forms.ListBox()
         Me.lstEng = New System.Windows.Forms.ListBox()
         Me.grpNihongo.SuspendLayout()
         Me.grpEng.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'grpNihongo
@@ -49,9 +54,9 @@ Partial Class Form1
         Me.grpNihongo.BackColor = System.Drawing.Color.White
         Me.grpNihongo.Controls.Add(Me.lblKana)
         Me.grpNihongo.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.grpNihongo.Location = New System.Drawing.Point(24, 36)
+        Me.grpNihongo.Location = New System.Drawing.Point(187, 12)
         Me.grpNihongo.Name = "grpNihongo"
-        Me.grpNihongo.Size = New System.Drawing.Size(368, 154)
+        Me.grpNihongo.Size = New System.Drawing.Size(1146, 285)
         Me.grpNihongo.TabIndex = 2
         Me.grpNihongo.TabStop = False
         Me.grpNihongo.Text = "日本語"
@@ -60,10 +65,11 @@ Partial Class Form1
         '
         'lblKana
         '
-        Me.lblKana.Font = New System.Drawing.Font("MS Mincho", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.lblKana.Location = New System.Drawing.Point(6, 71)
+        Me.lblKana.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.lblKana.Font = New System.Drawing.Font("MingLiU-ExtB", 51.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblKana.Location = New System.Drawing.Point(6, 125)
         Me.lblKana.Name = "lblKana"
-        Me.lblKana.Size = New System.Drawing.Size(356, 42)
+        Me.lblKana.Size = New System.Drawing.Size(1134, 64)
         Me.lblKana.TabIndex = 0
         Me.lblKana.Text = "かわいい"
         Me.lblKana.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -74,9 +80,9 @@ Partial Class Form1
         Me.grpEng.BackColor = System.Drawing.Color.White
         Me.grpEng.Controls.Add(Me.lblEng)
         Me.grpEng.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.grpEng.Location = New System.Drawing.Point(587, 36)
+        Me.grpEng.Location = New System.Drawing.Point(187, 312)
         Me.grpEng.Name = "grpEng"
-        Me.grpEng.Size = New System.Drawing.Size(368, 154)
+        Me.grpEng.Size = New System.Drawing.Size(1146, 285)
         Me.grpEng.TabIndex = 3
         Me.grpEng.TabStop = False
         Me.grpEng.Text = "英語"
@@ -85,10 +91,11 @@ Partial Class Form1
         '
         'lblEng
         '
-        Me.lblEng.Font = New System.Drawing.Font("MS Mincho", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.lblEng.Location = New System.Drawing.Point(6, 71)
+        Me.lblEng.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.lblEng.Font = New System.Drawing.Font("MingLiU-ExtB", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblEng.Location = New System.Drawing.Point(6, 125)
         Me.lblEng.Name = "lblEng"
-        Me.lblEng.Size = New System.Drawing.Size(356, 42)
+        Me.lblEng.Size = New System.Drawing.Size(1134, 64)
         Me.lblEng.TabIndex = 1
         Me.lblEng.Text = "cute"
         Me.lblEng.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -98,10 +105,10 @@ Partial Class Form1
         '
         Me.btnFlip.AutoSize = True
         Me.btnFlip.BackColor = System.Drawing.Color.LightYellow
-        Me.btnFlip.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnFlip.Location = New System.Drawing.Point(410, 103)
+        Me.btnFlip.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnFlip.Location = New System.Drawing.Point(557, 607)
         Me.btnFlip.Name = "btnFlip"
-        Me.btnFlip.Size = New System.Drawing.Size(157, 55)
+        Me.btnFlip.Size = New System.Drawing.Size(408, 62)
         Me.btnFlip.TabIndex = 2
         Me.btnFlip.Text = "フリップ"
         Me.ToolTip1.SetToolTip(Me.btnFlip, "Flip the Card")
@@ -111,10 +118,10 @@ Partial Class Form1
         'btnNext
         '
         Me.btnNext.BackColor = System.Drawing.Color.AliceBlue
-        Me.btnNext.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnNext.Location = New System.Drawing.Point(211, 205)
+        Me.btnNext.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnNext.Location = New System.Drawing.Point(187, 607)
         Me.btnNext.Name = "btnNext"
-        Me.btnNext.Size = New System.Drawing.Size(87, 38)
+        Me.btnNext.Size = New System.Drawing.Size(157, 55)
         Me.btnNext.TabIndex = 4
         Me.btnNext.Text = "次のカード"
         Me.ToolTip1.SetToolTip(Me.btnNext, "つぎにカード - Next Card")
@@ -124,10 +131,10 @@ Partial Class Form1
         'btnPrev
         '
         Me.btnPrev.BackColor = System.Drawing.Color.AliceBlue
-        Me.btnPrev.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnPrev.Location = New System.Drawing.Point(690, 205)
+        Me.btnPrev.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnPrev.Location = New System.Drawing.Point(1176, 607)
         Me.btnPrev.Name = "btnPrev"
-        Me.btnPrev.Size = New System.Drawing.Size(87, 38)
+        Me.btnPrev.Size = New System.Drawing.Size(157, 55)
         Me.btnPrev.TabIndex = 5
         Me.btnPrev.Text = "前のカード"
         Me.ToolTip1.SetToolTip(Me.btnPrev, "まえのカード - Previous Card")
@@ -138,10 +145,10 @@ Partial Class Form1
         '
         Me.btnAdd.AutoSize = True
         Me.btnAdd.BackColor = System.Drawing.Color.SkyBlue
-        Me.btnAdd.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnAdd.Location = New System.Drawing.Point(441, 179)
+        Me.btnAdd.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnAdd.Location = New System.Drawing.Point(12, 426)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(94, 32)
+        Me.btnAdd.Size = New System.Drawing.Size(157, 55)
         Me.btnAdd.TabIndex = 6
         Me.btnAdd.Text = "新しいカード"
         Me.ToolTip1.SetToolTip(Me.btnAdd, "あたらしいカード - Add New Cards")
@@ -151,10 +158,10 @@ Partial Class Form1
         '
         Me.btnExit.AutoSize = True
         Me.btnExit.BackColor = System.Drawing.Color.IndianRed
-        Me.btnExit.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnExit.Location = New System.Drawing.Point(441, 222)
+        Me.btnExit.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnExit.Location = New System.Drawing.Point(12, 518)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(94, 32)
+        Me.btnExit.Size = New System.Drawing.Size(157, 55)
         Me.btnExit.TabIndex = 7
         Me.btnExit.Text = "閉じる"
         Me.ToolTip1.SetToolTip(Me.btnExit, "とじる - Close Program")
@@ -164,9 +171,10 @@ Partial Class Form1
         '
         Me.rdoNihongo.AutoSize = True
         Me.rdoNihongo.Checked = True
+        Me.rdoNihongo.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.rdoNihongo.Location = New System.Drawing.Point(6, 24)
         Me.rdoNihongo.Name = "rdoNihongo"
-        Me.rdoNihongo.Size = New System.Drawing.Size(76, 26)
+        Me.rdoNihongo.Size = New System.Drawing.Size(116, 42)
         Me.rdoNihongo.TabIndex = 8
         Me.rdoNihongo.TabStop = True
         Me.rdoNihongo.Text = "日本語"
@@ -176,9 +184,10 @@ Partial Class Form1
         'rdoEnglish
         '
         Me.rdoEnglish.AutoSize = True
-        Me.rdoEnglish.Location = New System.Drawing.Point(6, 48)
+        Me.rdoEnglish.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.rdoEnglish.Location = New System.Drawing.Point(6, 68)
         Me.rdoEnglish.Name = "rdoEnglish"
-        Me.rdoEnglish.Size = New System.Drawing.Size(60, 26)
+        Me.rdoEnglish.Size = New System.Drawing.Size(89, 42)
         Me.rdoEnglish.TabIndex = 9
         Me.rdoEnglish.Text = "英語"
         Me.ToolTip1.SetToolTip(Me.rdoEnglish, "Show English First")
@@ -186,13 +195,12 @@ Partial Class Form1
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.btnStart)
         Me.GroupBox3.Controls.Add(Me.rdoNihongo)
         Me.GroupBox3.Controls.Add(Me.rdoEnglish)
         Me.GroupBox3.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.GroupBox3.Location = New System.Drawing.Point(410, 12)
+        Me.GroupBox3.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(157, 80)
+        Me.GroupBox3.Size = New System.Drawing.Size(157, 122)
         Me.GroupBox3.TabIndex = 10
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "テスト"
@@ -201,34 +209,81 @@ Partial Class Form1
         'btnStart
         '
         Me.btnStart.BackColor = System.Drawing.Color.PaleGreen
-        Me.btnStart.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnStart.Location = New System.Drawing.Point(88, 42)
+        Me.btnStart.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnStart.Location = New System.Drawing.Point(12, 334)
         Me.btnStart.Name = "btnStart"
-        Me.btnStart.Size = New System.Drawing.Size(63, 32)
+        Me.btnStart.Size = New System.Drawing.Size(157, 55)
         Me.btnStart.TabIndex = 0
         Me.btnStart.Text = "スタート"
         Me.ToolTip1.SetToolTip(Me.btnStart, "Start / Restart Test")
         Me.btnStart.UseVisualStyleBackColor = False
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.rdoVerbs)
+        Me.GroupBox1.Controls.Add(Me.rdoAdj)
+        Me.GroupBox1.Controls.Add(Me.rdoNouns)
+        Me.GroupBox1.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 153)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(157, 144)
+        Me.GroupBox1.TabIndex = 11
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "テスト"
+        Me.ToolTip1.SetToolTip(Me.GroupBox1, "Choose Test Type")
+        '
+        'rdoVerbs
+        '
+        Me.rdoVerbs.AutoSize = True
+        Me.rdoVerbs.Location = New System.Drawing.Point(6, 101)
+        Me.rdoVerbs.Name = "rdoVerbs"
+        Me.rdoVerbs.Size = New System.Drawing.Size(74, 26)
+        Me.rdoVerbs.TabIndex = 10
+        Me.rdoVerbs.Text = "Verbs"
+        Me.ToolTip1.SetToolTip(Me.rdoVerbs, "Show English First")
+        Me.rdoVerbs.UseVisualStyleBackColor = True
+        '
+        'rdoAdj
+        '
+        Me.rdoAdj.AutoSize = True
+        Me.rdoAdj.Checked = True
+        Me.rdoAdj.Location = New System.Drawing.Point(6, 31)
+        Me.rdoAdj.Name = "rdoAdj"
+        Me.rdoAdj.Size = New System.Drawing.Size(114, 26)
+        Me.rdoAdj.TabIndex = 8
+        Me.rdoAdj.TabStop = True
+        Me.rdoAdj.Text = "Adjectives"
+        Me.ToolTip1.SetToolTip(Me.rdoAdj, "Show Japanese First")
+        Me.rdoAdj.UseVisualStyleBackColor = True
+        '
+        'rdoNouns
+        '
+        Me.rdoNouns.AutoSize = True
+        Me.rdoNouns.Location = New System.Drawing.Point(6, 65)
+        Me.rdoNouns.Name = "rdoNouns"
+        Me.rdoNouns.Size = New System.Drawing.Size(79, 26)
+        Me.rdoNouns.TabIndex = 9
+        Me.rdoNouns.Text = "Nouns"
+        Me.ToolTip1.SetToolTip(Me.rdoNouns, "Show English First")
+        Me.rdoNouns.UseVisualStyleBackColor = True
+        '
         'lstNihongo
         '
         Me.lstNihongo.FormattingEnabled = True
         Me.lstNihongo.ItemHeight = 15
-        Me.lstNihongo.Location = New System.Drawing.Point(24, 196)
+        Me.lstNihongo.Location = New System.Drawing.Point(12, 675)
         Me.lstNihongo.Name = "lstNihongo"
-        Me.lstNihongo.Size = New System.Drawing.Size(120, 64)
+        Me.lstNihongo.Size = New System.Drawing.Size(238, 649)
         Me.lstNihongo.TabIndex = 11
-        Me.lstNihongo.Visible = False
         '
         'lstEng
         '
         Me.lstEng.FormattingEnabled = True
         Me.lstEng.ItemHeight = 15
-        Me.lstEng.Location = New System.Drawing.Point(835, 196)
+        Me.lstEng.Location = New System.Drawing.Point(273, 675)
         Me.lstEng.Name = "lstEng"
-        Me.lstEng.Size = New System.Drawing.Size(120, 64)
+        Me.lstEng.Size = New System.Drawing.Size(238, 649)
         Me.lstEng.TabIndex = 12
-        Me.lstEng.Visible = False
         '
         'Form1
         '
@@ -237,13 +292,15 @@ Partial Class Form1
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImage = Global.Vocab_Flashcards.My.Resources.Resources.japanesepattern02
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(976, 270)
+        Me.ClientSize = New System.Drawing.Size(1348, 674)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.btnStart)
         Me.Controls.Add(Me.lstEng)
+        Me.Controls.Add(Me.btnExit)
+        Me.Controls.Add(Me.btnPrev)
         Me.Controls.Add(Me.lstNihongo)
         Me.Controls.Add(Me.GroupBox3)
-        Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnAdd)
-        Me.Controls.Add(Me.btnPrev)
         Me.Controls.Add(Me.btnNext)
         Me.Controls.Add(Me.btnFlip)
         Me.Controls.Add(Me.grpEng)
@@ -255,6 +312,8 @@ Partial Class Form1
         Me.grpEng.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -276,4 +335,8 @@ Partial Class Form1
     Friend WithEvents btnStart As Button
     Friend WithEvents lstNihongo As ListBox
     Friend WithEvents lstEng As ListBox
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents rdoVerbs As RadioButton
+    Friend WithEvents rdoAdj As RadioButton
+    Friend WithEvents rdoNouns As RadioButton
 End Class

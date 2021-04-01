@@ -39,6 +39,8 @@
         grpNihongo.Visible = True
         grpEng.Visible = True
 
+        btnFlip.Focus()
+
     End Sub
 
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
