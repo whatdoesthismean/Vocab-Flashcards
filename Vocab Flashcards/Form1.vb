@@ -8,19 +8,52 @@
         lstNihongo.Items.Clear() 'clear the list boxes so old list items aren't duplicated
         lstEng.Items.Clear()
 
-        R = New IO.StreamReader("nihongo.txt") 'read japanese vocabulary list from text file
-        While (R.Peek() > -1)
-            lstNihongo.Items.Add(R.ReadLine)
-        End While
-        R.Close()
+        If rdoAdj.Checked Then
+
+            R = New IO.StreamReader("nihongo.txt") 'read japanese vocabulary list from text file
+            While (R.Peek() > -1)
+                lstNihongo.Items.Add(R.ReadLine)
+            End While
+            R.Close()
 
 
-        R = New IO.StreamReader("eng.txt") 'read english vocabulary list from text file
-        While (R.Peek() > -1)
-            lstEng.Items.Add(R.ReadLine)
-        End While
-        R.Close()
+            R = New IO.StreamReader("eng.txt") 'read english vocabulary list from text file
+            While (R.Peek() > -1)
+                lstEng.Items.Add(R.ReadLine)
+            End While
+            R.Close()
 
+        ElseIf rdoNouns.Checked Then
+
+            R = New IO.StreamReader("nihongoNouns.txt") 'read japanese vocabulary list from text file
+            While (R.Peek() > -1)
+                lstNihongo.Items.Add(R.ReadLine)
+            End While
+            R.Close()
+
+
+            R = New IO.StreamReader("engNouns.txt") 'read english vocabulary list from text file
+            While (R.Peek() > -1)
+                lstEng.Items.Add(R.ReadLine)
+            End While
+            R.Close()
+
+        Else
+
+            R = New IO.StreamReader("nihongoVerbs.txt") 'read japanese vocabulary list from text file
+            While (R.Peek() > -1)
+                lstNihongo.Items.Add(R.ReadLine)
+            End While
+            R.Close()
+
+
+            R = New IO.StreamReader("engVerbs.txt") 'read english vocabulary list from text file
+            While (R.Peek() > -1)
+                lstEng.Items.Add(R.ReadLine)
+            End While
+            R.Close()
+
+        End If
 
         lblKana.Text = lstNihongo.Items(intSub).ToString 'load first flashcard into form labels
         lblEng.Text = lstEng.Items(intSub).ToString
