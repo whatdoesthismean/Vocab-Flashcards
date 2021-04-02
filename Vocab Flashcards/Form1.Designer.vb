@@ -229,8 +229,8 @@ Partial Class Form1
         Me.GroupBox1.Size = New System.Drawing.Size(157, 144)
         Me.GroupBox1.TabIndex = 11
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "テスト"
-        Me.ToolTip1.SetToolTip(Me.GroupBox1, "Choose Test Type")
+        Me.GroupBox1.Text = "オプション"
+        Me.ToolTip1.SetToolTip(Me.GroupBox1, "Choose Test Option")
         '
         'rdoVerbs
         '
@@ -240,7 +240,7 @@ Partial Class Form1
         Me.rdoVerbs.Size = New System.Drawing.Size(74, 26)
         Me.rdoVerbs.TabIndex = 10
         Me.rdoVerbs.Text = "Verbs"
-        Me.ToolTip1.SetToolTip(Me.rdoVerbs, "Show English First")
+        Me.ToolTip1.SetToolTip(Me.rdoVerbs, "Test Verbs")
         Me.rdoVerbs.UseVisualStyleBackColor = True
         '
         'rdoAdj
@@ -253,7 +253,7 @@ Partial Class Form1
         Me.rdoAdj.TabIndex = 8
         Me.rdoAdj.TabStop = True
         Me.rdoAdj.Text = "Adjectives"
-        Me.ToolTip1.SetToolTip(Me.rdoAdj, "Show Japanese First")
+        Me.ToolTip1.SetToolTip(Me.rdoAdj, "Test Adjectives")
         Me.rdoAdj.UseVisualStyleBackColor = True
         '
         'rdoNouns
@@ -264,7 +264,7 @@ Partial Class Form1
         Me.rdoNouns.Size = New System.Drawing.Size(79, 26)
         Me.rdoNouns.TabIndex = 9
         Me.rdoNouns.Text = "Nouns"
-        Me.ToolTip1.SetToolTip(Me.rdoNouns, "Show English First")
+        Me.ToolTip1.SetToolTip(Me.rdoNouns, "Test Nouns")
         Me.rdoNouns.UseVisualStyleBackColor = True
         '
         'lstNihongo

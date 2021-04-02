@@ -1,9 +1,12 @@
 ﻿Public Class Form2
     Dim W As IO.StreamWriter
     Dim R As IO.StreamReader
+
+
     Private Sub btnAddNew_Click(sender As Object, e As EventArgs) Handles btnAddNew.Click
 
         Dim I As Integer
+
 
 
         If Not String.IsNullOrEmpty(txtKanaNew.Text) And Not String.IsNullOrEmpty(txtEngNew.Text) Then
@@ -19,39 +22,75 @@
             txtKanaNew.Text = ""
             txtEngNew.Text = ""
 
+            If Form1.rdoAdj.Checked Then
+
+                W = New IO.StreamWriter("nihongo.txt")
+                For I = 0 To Form1.lstNihongo.Items.Count - 1
+                    W.WriteLine(Form1.lstNihongo.Items.Item(I))
+                Next
+                W.Close()
+
+                W = New IO.StreamWriter("eng.txt")
+                For I = 0 To Form1.lstEng.Items.Count - 1
+                    W.WriteLine(Form1.lstEng.Items.Item(I))
+                Next
+                W.Close()
 
 
-            W = New IO.StreamWriter("nihongo.txt")
-            For I = 0 To Form1.lstNihongo.Items.Count - 1
-                W.WriteLine(Form1.lstNihongo.Items.Item(I))
-            Next
-            W.Close()
 
-            W = New IO.StreamWriter("eng.txt")
-            For I = 0 To Form1.lstEng.Items.Count - 1
-                W.WriteLine(Form1.lstEng.Items.Item(I))
-            Next
-            W.Close()
+                ElseIf Form1.rdoNouns.Checked Then
+
+                W = New IO.StreamWriter("nihongoNouns.txt")
+                For I = 0 To Form1.lstNihongo.Items.Count - 1
+                    W.WriteLine(Form1.lstNihongo.Items.Item(I))
+                Next
+                W.Close()
+
+                W = New IO.StreamWriter("engNouns.txt")
+                For I = 0 To Form1.lstEng.Items.Count - 1
+                    W.WriteLine(Form1.lstEng.Items.Item(I))
+                Next
+                W.Close()
+
+
+
+            Else
+
+                W = New IO.StreamWriter("nihongoVerbs.txt")
+                For I = 0 To Form1.lstNihongo.Items.Count - 1
+                    W.WriteLine(Form1.lstNihongo.Items.Item(I))
+                Next
+                W.Close()
+
+                W = New IO.StreamWriter("engVerbs.txt")
+                For I = 0 To Form1.lstEng.Items.Count - 1
+                    W.WriteLine(Form1.lstEng.Items.Item(I))
+                Next
+                W.Close()
+
+
+
+            End If
 
             lblSaved.Visible = True
 
-            txtKanaNew.Focus()
+                txtKanaNew.Focus()
 
-        ElseIf String.IsNullOrEmpty(txtKanaNew.Text) And Not String.IsNullOrEmpty(txtEngNew.Text) Then
+            ElseIf String.IsNullOrEmpty(txtKanaNew.Text) And Not String.IsNullOrEmpty(txtEngNew.Text) Then
 
-            lblNihongoPlease.Visible = True
-            lblEngPlease.Visible = False
-            lblSaved.Visible = False
+                lblNihongoPlease.Visible = True
+                lblEngPlease.Visible = False
+                lblSaved.Visible = False
 
-        ElseIf String.IsNullOrEmpty(txtEngNew.Text) And Not String.IsNullOrEmpty(txtKanaNew.Text) Then
+            ElseIf String.IsNullOrEmpty(txtEngNew.Text) And Not String.IsNullOrEmpty(txtKanaNew.Text) Then
 
-            lblNihongoPlease.Visible = False
-            lblEngPlease.Visible = True
-            lblSaved.Visible = False
+                lblNihongoPlease.Visible = False
+                lblEngPlease.Visible = True
+                lblSaved.Visible = False
 
-        Else
+            Else
 
-            lblNihongoPlease.Visible = True
+                lblNihongoPlease.Visible = True
             lblEngPlease.Visible = True
             lblSaved.Visible = False
 

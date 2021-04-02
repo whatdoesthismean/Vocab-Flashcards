@@ -34,6 +34,7 @@ Partial Class Form2
         Me.lblEngPlease = New System.Windows.Forms.Label()
         Me.lblNihongoPlease = New System.Windows.Forms.Label()
         Me.lblSaved = New System.Windows.Forms.Label()
+        Me.lblType = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -43,6 +44,7 @@ Partial Class Form2
         Me.GroupBox1.BackColor = System.Drawing.Color.Thistle
         Me.GroupBox1.Controls.Add(Me.txtKanaNew)
         Me.GroupBox1.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.GroupBox1.ImeMode = System.Windows.Forms.ImeMode.Hiragana
         Me.GroupBox1.Location = New System.Drawing.Point(9, 91)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(274, 154)
@@ -85,10 +87,10 @@ Partial Class Form2
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(20, 10)
+        Me.Label1.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Location = New System.Drawing.Point(50, 10)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(252, 67)
+        Me.Label1.Size = New System.Drawing.Size(193, 52)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "新しいカード"
         '
@@ -154,12 +156,23 @@ Partial Class Form2
         Me.lblSaved.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.lblSaved.Visible = False
         '
+        'lblType
+        '
+        Me.lblType.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblType.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblType.Location = New System.Drawing.Point(9, 54)
+        Me.lblType.Name = "lblType"
+        Me.lblType.Size = New System.Drawing.Size(274, 27)
+        Me.lblType.TabIndex = 12
+        Me.lblType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightCyan
         Me.ClientSize = New System.Drawing.Size(293, 686)
+        Me.Controls.Add(Me.lblType)
         Me.Controls.Add(Me.lblSaved)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.lblNihongoPlease)
@@ -191,5 +204,6 @@ Partial Class Form2
     Friend WithEvents lblEngPlease As Label
     Friend WithEvents lblNihongoPlease As Label
     Friend WithEvents lblSaved As Label
+    Friend WithEvents lblType As Label
 End Class
 

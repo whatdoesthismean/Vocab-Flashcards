@@ -161,17 +161,57 @@
         lstNihongo.Items.Clear()    'clear list items so old items aren't duplicated
         lstEng.Items.Clear()
 
-        R = New IO.StreamReader("nihongo.txt")  'read flashcards from text files into listboxes
-        While (R.Peek() > -1)
-            lstNihongo.Items.Add(R.ReadLine)
-        End While
-        R.Close()
+        If rdoAdj.Checked Then
 
-        R = New IO.StreamReader("eng.txt")
-        While (R.Peek() > -1)
-            lstEng.Items.Add(R.ReadLine)
-        End While
-        R.Close()
+            R = New IO.StreamReader("nihongo.txt") 'read japanese vocabulary list from text file
+            While (R.Peek() > -1)
+                lstNihongo.Items.Add(R.ReadLine)
+            End While
+            R.Close()
+
+
+            R = New IO.StreamReader("eng.txt") 'read english vocabulary list from text file
+            While (R.Peek() > -1)
+                lstEng.Items.Add(R.ReadLine)
+            End While
+            R.Close()
+
+            Form2.lblType.Text = "Adjectives"
+
+        ElseIf rdoNouns.Checked Then
+
+            R = New IO.StreamReader("nihongoNouns.txt") 'read japanese vocabulary list from text file
+            While (R.Peek() > -1)
+                lstNihongo.Items.Add(R.ReadLine)
+            End While
+            R.Close()
+
+
+            R = New IO.StreamReader("engNouns.txt") 'read english vocabulary list from text file
+            While (R.Peek() > -1)
+                lstEng.Items.Add(R.ReadLine)
+            End While
+            R.Close()
+
+            Form2.lblType.Text = "Nouns"
+
+        Else
+
+            R = New IO.StreamReader("nihongoVerbs.txt") 'read japanese vocabulary list from text file
+            While (R.Peek() > -1)
+                lstNihongo.Items.Add(R.ReadLine)
+            End While
+            R.Close()
+
+            R = New IO.StreamReader("engVerbs.txt") 'read english vocabulary list from text file
+            While (R.Peek() > -1)
+                lstEng.Items.Add(R.ReadLine)
+            End While
+            R.Close()
+
+            Form2.lblType.Text = "Verbs"
+
+        End If
 
         btnFlip.Visible = False 'make user controls disappear
         btnNext.Visible = False
@@ -183,3 +223,4 @@
 
     End Sub
 End Class
+
