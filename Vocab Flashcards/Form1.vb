@@ -4,6 +4,7 @@
     Dim intSub As Integer 'works with list item count to select card order
     Dim rand As New Random
     Dim intRand As Integer
+    Dim intKeep As Integer
 
     Private Sub btnStart_Click(sender As Object, e As EventArgs) Handles btnStart.Click
 
@@ -61,8 +62,16 @@
 
             intRand = rand.Next(lstNihongo.Items.Count)
 
+            Do While intKeep = intRand
+
+                intRand = rand.Next(lstNihongo.Items.Count)
+
+            Loop
+
             lblKana.Text = lstNihongo.Items(intRand).ToString   'load next flashcard into form labels
             lblEng.Text = lstEng.Items(intRand).ToString
+
+            intKeep = intRand
 
         Else
 
@@ -95,8 +104,16 @@
 
             intRand = rand.Next(lstNihongo.Items.Count)
 
+            Do While intKeep = intRand
+
+                intRand = rand.Next(lstNihongo.Items.Count)
+
+            Loop
+
             lblKana.Text = lstNihongo.Items(intRand).ToString   'load next flashcard into form labels
             lblEng.Text = lstEng.Items(intRand).ToString
+
+            intKeep = intRand
 
         ElseIf rdoOrdered.Checked Then
 
@@ -154,8 +171,16 @@
 
             intRand = rand.Next(lstNihongo.Items.Count)
 
+            Do While intKeep = intRand
+
+                intRand = rand.Next(lstNihongo.Items.Count)
+
+            Loop
+
             lblKana.Text = lstNihongo.Items(intRand).ToString
             lblEng.Text = lstEng.Items(intRand).ToString
+
+            intKeep = intRand
 
         ElseIf rdoOrdered.Checked Then
 
