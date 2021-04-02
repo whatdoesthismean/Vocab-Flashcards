@@ -1,7 +1,9 @@
 ﻿Public Class Form1
 
     Dim R As IO.StreamReader
-    Dim intSub As Integer 'works with list item count to select cards in order
+    Dim intSub As Integer 'works with list item count to select card order
+    Dim rand As New Random
+    Dim intRand As Integer
 
     Private Sub btnStart_Click(sender As Object, e As EventArgs) Handles btnStart.Click
 
@@ -55,8 +57,19 @@
 
         End If
 
-        lblKana.Text = lstNihongo.Items(intSub).ToString 'load first flashcard into form labels
-        lblEng.Text = lstEng.Items(intSub).ToString
+        If rdoRandom.Checked Then
+
+            intRand = rand.Next(lstNihongo.Items.Count)
+
+            lblKana.Text = lstNihongo.Items(intRand).ToString   'load next flashcard into form labels
+            lblEng.Text = lstEng.Items(intRand).ToString
+
+        Else
+
+            lblKana.Text = lstNihongo.Items(intSub).ToString   'load next flashcard into form labels
+            lblEng.Text = lstEng.Items(intSub).ToString
+
+        End If
 
         If rdoNihongo.Checked Then 'select which side of flashcard shows first based on radio button selection
             lblKana.Visible = True
@@ -78,17 +91,31 @@
 
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
 
-        If intSub < lstNihongo.Items.Count - 1 Then  'cycle through cards, after last card on list, return to first card
-            intSub += 1
-        Else
-            intSub = 0
+        If rdoRandom.Checked Then
+
+            intRand = rand.Next(lstNihongo.Items.Count)
+
+            lblKana.Text = lstNihongo.Items(intRand).ToString   'load next flashcard into form labels
+            lblEng.Text = lstEng.Items(intRand).ToString
+
+        ElseIf rdoOrdered.Checked Then
+
+            If intSub < lstNihongo.Items.Count - 1 Then  'cycle through cards, after last card on list, return to first card
+                intSub += 1
+                lblKana.Text = lstNihongo.Items(intSub).ToString   ' load next flashcard into form labels
+                lblEng.Text = lstEng.Items(intSub).ToString
+            Else
+                intSub = 0
+                lblKana.Text = lstNihongo.Items(intSub).ToString   'load next flashcard into form labels
+                lblEng.Text = lstEng.Items(intSub).ToString
+            End If
+
         End If
 
 
-        lblKana.Text = lstNihongo.Items(intSub).ToString   'load next flashcard into form labels
-        lblEng.Text = lstEng.Items(intSub).ToString
 
-        If rdoNihongo.Checked Then  'select which side of flashcard shows first
+
+        If rdoNihongo.Checked Then  ' select which side of flashcard shows first
             lblKana.Visible = True
             lblEng.Visible = False
         Else
@@ -101,8 +128,6 @@
     End Sub
 
     Private Sub btnFlip_Click(sender As Object, e As EventArgs) Handles btnFlip.Click
-
-
 
         If rdoNihongo.Checked Then          'flip the flashcard
             If lblEng.Visible = False Then
@@ -125,17 +150,31 @@
 
     Private Sub btnPrev_Click(sender As Object, e As EventArgs) Handles btnPrev.Click
 
+        If rdoRandom.Checked Then       'display flashcards in random order
 
+            intRand = rand.Next(lstNihongo.Items.Count)
 
+            lblKana.Text = lstNihongo.Items(intRand).ToString
+            lblEng.Text = lstEng.Items(intRand).ToString
 
-        If intSub > 0 Then      'cycle through flashcards in reverse order
-            intSub -= 1
-            lblKana.Text = lstNihongo.Items(intSub).ToString
-            lblEng.Text = lstEng.Items(intSub).ToString
-        Else
-            intSub = lstNihongo.Items.Count - 1
-            lblKana.Text = lstNihongo.Items(intSub).ToString
-            lblEng.Text = lstEng.Items(intSub).ToString
+        ElseIf rdoOrdered.Checked Then
+
+            If intSub > 0 Then          'cycle through flashcards in reverse order
+
+                intSub -= 1
+
+                lblKana.Text = lstNihongo.Items(intSub).ToString
+                lblEng.Text = lstEng.Items(intSub).ToString
+
+            Else
+
+                intSub = lstNihongo.Items.Count - 1
+
+                lblKana.Text = lstNihongo.Items(intSub).ToString
+                lblEng.Text = lstEng.Items(intSub).ToString
+
+            End If
+
         End If
 
         If rdoNihongo.Checked Then  'determine which side of flashcard to show first

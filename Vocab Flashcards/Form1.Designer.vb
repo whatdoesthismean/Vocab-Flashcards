@@ -41,12 +41,16 @@ Partial Class Form1
         Me.rdoVerbs = New System.Windows.Forms.RadioButton()
         Me.rdoAdj = New System.Windows.Forms.RadioButton()
         Me.rdoNouns = New System.Windows.Forms.RadioButton()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.rdoRandom = New System.Windows.Forms.RadioButton()
+        Me.rdoOrdered = New System.Windows.Forms.RadioButton()
         Me.lstNihongo = New System.Windows.Forms.ListBox()
         Me.lstEng = New System.Windows.Forms.ListBox()
         Me.grpNihongo.SuspendLayout()
         Me.grpEng.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'grpNihongo
@@ -146,7 +150,7 @@ Partial Class Form1
         Me.btnAdd.AutoSize = True
         Me.btnAdd.BackColor = System.Drawing.Color.SkyBlue
         Me.btnAdd.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnAdd.Location = New System.Drawing.Point(12, 426)
+        Me.btnAdd.Location = New System.Drawing.Point(12, 481)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(157, 55)
         Me.btnAdd.TabIndex = 6
@@ -159,7 +163,7 @@ Partial Class Form1
         Me.btnExit.AutoSize = True
         Me.btnExit.BackColor = System.Drawing.Color.IndianRed
         Me.btnExit.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnExit.Location = New System.Drawing.Point(12, 518)
+        Me.btnExit.Location = New System.Drawing.Point(12, 542)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(157, 55)
         Me.btnExit.TabIndex = 7
@@ -210,7 +214,7 @@ Partial Class Form1
         '
         Me.btnStart.BackColor = System.Drawing.Color.PaleGreen
         Me.btnStart.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btnStart.Location = New System.Drawing.Point(12, 334)
+        Me.btnStart.Location = New System.Drawing.Point(12, 420)
         Me.btnStart.Name = "btnStart"
         Me.btnStart.Size = New System.Drawing.Size(157, 55)
         Me.btnStart.TabIndex = 0
@@ -224,7 +228,7 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.rdoAdj)
         Me.GroupBox1.Controls.Add(Me.rdoNouns)
         Me.GroupBox1.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 153)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 148)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(157, 144)
         Me.GroupBox1.TabIndex = 11
@@ -267,6 +271,41 @@ Partial Class Form1
         Me.ToolTip1.SetToolTip(Me.rdoNouns, "Test Nouns")
         Me.rdoNouns.UseVisualStyleBackColor = True
         '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.rdoRandom)
+        Me.GroupBox2.Controls.Add(Me.rdoOrdered)
+        Me.GroupBox2.Font = New System.Drawing.Font("Corporate Logo Rounded ver2 Bd", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 306)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(157, 100)
+        Me.GroupBox2.TabIndex = 13
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "順序"
+        Me.ToolTip1.SetToolTip(Me.GroupBox2, "じゅんじょ  - Select Card Sequence")
+        '
+        'rdoRandom
+        '
+        Me.rdoRandom.AutoSize = True
+        Me.rdoRandom.Location = New System.Drawing.Point(6, 62)
+        Me.rdoRandom.Name = "rdoRandom"
+        Me.rdoRandom.Size = New System.Drawing.Size(97, 26)
+        Me.rdoRandom.TabIndex = 1
+        Me.rdoRandom.Text = "Random"
+        Me.rdoRandom.UseVisualStyleBackColor = True
+        '
+        'rdoOrdered
+        '
+        Me.rdoOrdered.AutoSize = True
+        Me.rdoOrdered.Checked = True
+        Me.rdoOrdered.Location = New System.Drawing.Point(7, 30)
+        Me.rdoOrdered.Name = "rdoOrdered"
+        Me.rdoOrdered.Size = New System.Drawing.Size(97, 26)
+        Me.rdoOrdered.TabIndex = 0
+        Me.rdoOrdered.TabStop = True
+        Me.rdoOrdered.Text = "Ordered"
+        Me.rdoOrdered.UseVisualStyleBackColor = True
+        '
         'lstNihongo
         '
         Me.lstNihongo.FormattingEnabled = True
@@ -293,6 +332,7 @@ Partial Class Form1
         Me.BackgroundImage = Global.Vocab_Flashcards.My.Resources.Resources.japanesepattern02
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1348, 674)
+        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnStart)
         Me.Controls.Add(Me.lstEng)
@@ -314,6 +354,8 @@ Partial Class Form1
         Me.GroupBox3.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -339,4 +381,7 @@ Partial Class Form1
     Friend WithEvents rdoVerbs As RadioButton
     Friend WithEvents rdoAdj As RadioButton
     Friend WithEvents rdoNouns As RadioButton
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents rdoRandom As RadioButton
+    Friend WithEvents rdoOrdered As RadioButton
 End Class
