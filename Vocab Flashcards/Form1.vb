@@ -3,8 +3,8 @@
     Dim R As IO.StreamReader
     Dim intSub As Integer 'works with list item count to select card order
     Dim rand As New Random
-    Dim intRand As Integer
-    Dim intKeep As Integer
+    Dim intRand As Integer 'works with list item count to select random card
+    Dim intKeep As Integer 'stores list index of random card to compare to next random card
 
     Private Sub btnStart_Click(sender As Object, e As EventArgs) Handles btnStart.Click
 
@@ -60,18 +60,18 @@
 
         If rdoRandom.Checked Then
 
-            intRand = rand.Next(lstNihongo.Items.Count)
+            intRand = rand.Next(lstNihongo.Items.Count) 'chooses random card
 
-            Do While intKeep = intRand
+            Do While intKeep = intRand 'makes sure the same card is not selected twice in a row
 
                 intRand = rand.Next(lstNihongo.Items.Count)
 
             Loop
 
-            lblKana.Text = lstNihongo.Items(intRand).ToString   'load next flashcard into form labels
+            lblKana.Text = lstNihongo.Items(intRand).ToString   'display randomly chosen card
             lblEng.Text = lstEng.Items(intRand).ToString
 
-            intKeep = intRand
+            intKeep = intRand 'stores index of currently displayed random card
 
         Else
 
@@ -222,19 +222,19 @@
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
 
-        lstNihongo.Items.Clear()    'clear list items so old items aren't duplicated
+        lstNihongo.Items.Clear()    'clear list items so old list items aren't duplicated
         lstEng.Items.Clear()
 
         If rdoAdj.Checked Then
 
-            R = New IO.StreamReader("nihongo.txt") 'read japanese vocabulary list from text file
+            R = New IO.StreamReader("nihongo.txt") 'read japanese adjective vocabulary list from text file
             While (R.Peek() > -1)
                 lstNihongo.Items.Add(R.ReadLine)
             End While
             R.Close()
 
 
-            R = New IO.StreamReader("eng.txt") 'read english vocabulary list from text file
+            R = New IO.StreamReader("eng.txt") 'read english adjective vocabulary list from text file
             While (R.Peek() > -1)
                 lstEng.Items.Add(R.ReadLine)
             End While
@@ -244,14 +244,14 @@
 
         ElseIf rdoNouns.Checked Then
 
-            R = New IO.StreamReader("nihongoNouns.txt") 'read japanese vocabulary list from text file
+            R = New IO.StreamReader("nihongoNouns.txt") 'read japanese noun vocabulary list from text file
             While (R.Peek() > -1)
                 lstNihongo.Items.Add(R.ReadLine)
             End While
             R.Close()
 
 
-            R = New IO.StreamReader("engNouns.txt") 'read english vocabulary list from text file
+            R = New IO.StreamReader("engNouns.txt") 'read english noun vocabulary list from text file
             While (R.Peek() > -1)
                 lstEng.Items.Add(R.ReadLine)
             End While
@@ -261,13 +261,13 @@
 
         Else
 
-            R = New IO.StreamReader("nihongoVerbs.txt") 'read japanese vocabulary list from text file
+            R = New IO.StreamReader("nihongoVerbs.txt") 'read japanese verb vocabulary list from text file
             While (R.Peek() > -1)
                 lstNihongo.Items.Add(R.ReadLine)
             End While
             R.Close()
 
-            R = New IO.StreamReader("engVerbs.txt") 'read english vocabulary list from text file
+            R = New IO.StreamReader("engVerbs.txt") 'read english verb vocabulary list from text file
             While (R.Peek() > -1)
                 lstEng.Items.Add(R.ReadLine)
             End While
