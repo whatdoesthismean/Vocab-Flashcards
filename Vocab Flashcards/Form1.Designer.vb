@@ -341,9 +341,9 @@ Partial Class Form1
         '
         Me.lstRand.FormattingEnabled = True
         Me.lstRand.ItemHeight = 15
-        Me.lstRand.Location = New System.Drawing.Point(1016, 664)
+        Me.lstRand.Location = New System.Drawing.Point(1016, 607)
         Me.lstRand.Name = "lstRand"
-        Me.lstRand.Size = New System.Drawing.Size(120, 94)
+        Me.lstRand.Size = New System.Drawing.Size(120, 49)
         Me.lstRand.TabIndex = 15
         Me.lstRand.Visible = False
         '

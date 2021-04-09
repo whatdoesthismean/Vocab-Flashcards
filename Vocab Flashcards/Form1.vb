@@ -4,6 +4,7 @@
     Dim intSub As Integer 'works with list item count to select card order
     Dim rand As New Random
     Dim intRand As Integer 'works with list item count to select random card
+    Dim intKeep As Integer
 
     Private Sub btnStart_Click(sender As Object, e As EventArgs) Handles btnStart.Click
 
@@ -80,7 +81,7 @@
 
         Else
 
-                lblKana.Text = lstNihongo.Items(intSub).ToString   'load next flashcard into form labels
+            lblKana.Text = lstNihongo.Items(intSub).ToString   'load next flashcard into form labels
             lblEng.Text = lstEng.Items(intSub).ToString
 
         End If
@@ -134,6 +135,16 @@
         picStart.Visible = True
     End Sub
 
+    Private Sub rdoRandom_CheckedChanged(sender As Object,
+      e As EventArgs) Handles rdoRandom.CheckedChanged
+        btnFlip.Visible = False 'make user controls disappear
+        btnNext.Visible = False
+        btnPrev.Visible = False
+        grpNihongo.Visible = False
+        grpEng.Visible = False
+        picStart.Visible = True
+    End Sub
+
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
 
         If rdoRandom.Checked Then
@@ -145,6 +156,12 @@
                 intRand = rand.Next(lstNihongo.Items.Count)
             End If
 
+            Do While intRand = intKeep
+
+                intRand = rand.Next(lstNihongo.Items.Count)
+
+            Loop
+
             Do While lstRand.Items.Contains(intRand) 'makes sure all cards are used before repeating any card
 
                 intRand = rand.Next(lstNihongo.Items.Count)
@@ -155,6 +172,7 @@
             lblEng.Text = lstEng.Items(intRand).ToString
 
             lstRand.Items.Add(intRand) 'stores index of currently displayed random card
+            intKeep = intRand
 
         ElseIf rdoOrdered.Checked Then
 
