@@ -27,6 +27,7 @@ Partial Class Form1
         Me.lblKana = New System.Windows.Forms.Label()
         Me.grpEng = New System.Windows.Forms.GroupBox()
         Me.lblEng = New System.Windows.Forms.Label()
+        Me.picStart = New System.Windows.Forms.PictureBox()
         Me.btnFlip = New System.Windows.Forms.Button()
         Me.btnNext = New System.Windows.Forms.Button()
         Me.btnPrev = New System.Windows.Forms.Button()
@@ -46,8 +47,10 @@ Partial Class Form1
         Me.rdoOrdered = New System.Windows.Forms.RadioButton()
         Me.lstNihongo = New System.Windows.Forms.ListBox()
         Me.lstEng = New System.Windows.Forms.ListBox()
+        Me.lstRand = New System.Windows.Forms.ListBox()
         Me.grpNihongo.SuspendLayout()
         Me.grpEng.SuspendLayout()
+        CType(Me.picStart, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -104,6 +107,16 @@ Partial Class Form1
         Me.lblEng.Text = "cute"
         Me.lblEng.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.lblEng.Visible = False
+        '
+        'picStart
+        '
+        Me.picStart.BackColor = System.Drawing.Color.Transparent
+        Me.picStart.Image = Global.Vocab_Flashcards.My.Resources.Resources.click_to_start
+        Me.picStart.Location = New System.Drawing.Point(173, 335)
+        Me.picStart.Name = "picStart"
+        Me.picStart.Size = New System.Drawing.Size(291, 232)
+        Me.picStart.TabIndex = 14
+        Me.picStart.TabStop = False
         '
         'btnFlip
         '
@@ -324,6 +337,16 @@ Partial Class Form1
         Me.lstEng.Size = New System.Drawing.Size(238, 649)
         Me.lstEng.TabIndex = 12
         '
+        'lstRand
+        '
+        Me.lstRand.FormattingEnabled = True
+        Me.lstRand.ItemHeight = 15
+        Me.lstRand.Location = New System.Drawing.Point(1016, 664)
+        Me.lstRand.Name = "lstRand"
+        Me.lstRand.Size = New System.Drawing.Size(120, 94)
+        Me.lstRand.TabIndex = 15
+        Me.lstRand.Visible = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -332,6 +355,7 @@ Partial Class Form1
         Me.BackgroundImage = Global.Vocab_Flashcards.My.Resources.Resources.japanesepattern02
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1348, 674)
+        Me.Controls.Add(Me.lstRand)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnStart)
@@ -345,11 +369,13 @@ Partial Class Form1
         Me.Controls.Add(Me.btnFlip)
         Me.Controls.Add(Me.grpEng)
         Me.Controls.Add(Me.grpNihongo)
+        Me.Controls.Add(Me.picStart)
         Me.Name = "Form1"
         Me.Text = "単語帳 - たんごちょう"
         Me.ToolTip1.SetToolTip(Me, "Flashcard Set")
         Me.grpNihongo.ResumeLayout(False)
         Me.grpEng.ResumeLayout(False)
+        CType(Me.picStart, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
@@ -384,4 +410,6 @@ Partial Class Form1
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents rdoRandom As RadioButton
     Friend WithEvents rdoOrdered As RadioButton
+    Friend WithEvents picStart As PictureBox
+    Friend WithEvents lstRand As ListBox
 End Class

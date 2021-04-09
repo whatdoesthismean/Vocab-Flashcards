@@ -124,10 +124,13 @@
   <data name="japanesepattern04" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\japanesepattern04.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="japanesepattern01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\japanesepattern01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="japanesepattern03" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\japanesepattern03.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="japanesepattern01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\japanesepattern01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="click to start" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\click to start.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
